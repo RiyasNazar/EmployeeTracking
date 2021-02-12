@@ -1,0 +1,127 @@
+have_header: checking for vm_core.h... -------------------- no
+
+"gcc -o conftest -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-linux -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/home/calibraint/.rbenv/sources/2.5.1/ruby-2.5.1 -I/home/calibraint/.rbenv/versions/2.5.1/include    -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC conftest.c  -L. -L/home/calibraint/.rbenv/versions/2.5.1/lib -Wl,-rpath,/home/calibraint/.rbenv/versions/2.5.1/lib -L. -L/home/calibraint/.rbenv/versions/2.5.1/lib  -fstack-protector -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/calibraint/.rbenv/versions/2.5.1/lib -L/home/calibraint/.rbenv/versions/2.5.1/lib -lruby  -lpthread -ldl -lcrypt -lm   -lc"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+"gcc -E -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-linux -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/home/calibraint/.rbenv/sources/2.5.1/ruby-2.5.1 -I/home/calibraint/.rbenv/versions/2.5.1/include    -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC  conftest.c -o conftest.i"
+conftest.c:3:10: fatal error: vm_core.h: No such file or directory
+ #include <vm_core.h>
+          ^~~~~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- no
+
+"gcc -E -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-linux -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby-2.5.1-p57 -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC  conftest.c -o conftest.i"
+conftest.c:3:10: fatal error: vm_core.h: No such file or directory
+ #include <vm_core.h>
+          ^~~~~~~~~~~
+compilation terminated.
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- yes
+
+"gcc -E -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-linux -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-ruby_core_source-0.10.11/lib/debase/ruby_core_source/ruby-2.5.1-p57 -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for iseq.h... -------------------- yes
+
+"gcc -E -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-linux -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-ruby_core_source-0.10.11/lib/debase/ruby_core_source/ruby-2.5.1-p57 -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <iseq.h>
+/* end */
+
+--------------------
+
+have_header: checking for version.h... -------------------- yes
+
+"gcc -E -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-linux -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-ruby_core_source-0.10.11/lib/debase/ruby_core_source/ruby-2.5.1-p57 -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <version.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- yes
+
+"gcc -E -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-linux -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-ruby_core_source-0.10.11/lib/debase/ruby_core_source/ruby-2.5.1-p57 -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_insnhelper.h... -------------------- yes
+
+"gcc -E -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-linux -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-ruby_core_source-0.10.11/lib/debase/ruby_core_source/ruby-2.5.1-p57 -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_insnhelper.h>
+/* end */
+
+--------------------
+
+have_header: checking for vm_core.h... -------------------- yes
+
+"gcc -E -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-linux -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-ruby_core_source-0.10.11/lib/debase/ruby_core_source/ruby-2.5.1-p57 -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <vm_core.h>
+/* end */
+
+--------------------
+
+have_header: checking for method.h... -------------------- yes
+
+"gcc -E -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/x86_64-linux -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0/ruby/backward -I/home/calibraint/.rbenv/versions/2.5.1/include/ruby-2.5.0 -I. -I/home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-ruby_core_source-0.10.11/lib/debase/ruby_core_source/ruby-2.5.1-p57 -O3 -ggdb3 -Wall -Wextra -Wno-unused-parameter -Wno-parentheses -Wno-long-long -Wno-missing-field-initializers -Wno-tautological-compare -Wno-parentheses-equality -Wno-constant-logical-operand -Wno-self-assign -Wunused-variable -Wimplicit-int -Wpointer-arith -Wwrite-strings -Wdeclaration-after-statement -Wimplicit-function-declaration -Wdeprecated-declarations -Wmisleading-indentation -Wno-packed-bitfield-compat -Wsuggest-attribute=noreturn -Wsuggest-attribute=format -Wimplicit-fallthrough=0 -Wduplicated-cond -Wrestrict  -fPIC  conftest.c -o conftest.i"
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: #include <method.h>
+/* end */
+
+--------------------
+

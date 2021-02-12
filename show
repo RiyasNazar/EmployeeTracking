@@ -1,0 +1,69 @@
+SHOW DETAILS:
+
+COUPON DETAILS:
+     
+	 COUPON NAME:  CHECK-EXPIRY
+	 
+	     SHOWINGID                                        TOURID                                      DISCOUNTAMT                        STATUS                            COUPONID
+	            -                                          5d6f709745cc7c53d6a4be45                            -                                                                       5d6fc4e448987e56a75dff7d
+		5d7104b55b8b9f5a00e835cf		                   -                                                    -                                  pending_feedback           5d710dc45b8b9f5a00e83736
+        5d0b447d79ade81d84071053                         -                                                    -                                  pending                          5d7a421c8102b610a437da0e
+		5d7b10208102b610a437e1b9         5d7b10778102b610a437e312                           -                                  pending                          5d7b10598102b610a437e310
+		
+		
+	COUPON NAME: 50OFF
+	   
+	   SHOWINGID                                        TOURID                                      DISCOUNTAMT                        STATUS                            COUPONID
+	   5d70ac4f5b8b9f5a00e819d5                         -                                                 2000                                pending_feedback              5d70b0d55b8b9f5a00e81b2e
+	   5d70c4915b8b9f5a00e8239a                        -                                                    -                                   archive                              5d70c53d5b8b9f5a00e824fe
+	   5d7104b55b8b9f5a00e835cf                         -                                                 2000                                pending_feedback              5d7105435b8b9f5a00e83729
+	   5d710e205b8b9f5a00e83738                        -                                                    -                                   archive                              5d710eab5b8b9f5a00e83891
+	   5d711fd35b8b9f5a00e83b25                         -                                                    -                                   pending                             5d71203b5b8b9f5a00e83c65
+	                      -                              5d71f7a17e9e2f622eb310b2                            -                                                                           5d7b77198102b610a437e5bf
+	                      -                              5d8c70cb3e33db08be85dbbc                           -                                                                           5d8c70e93e33db08be85dd29
+	  5d6e120aef58ee217ced0563                         -                                                    10                                 end                                   5d8ccb273e33db08be860148
+	  
+	  
+	 COUPON NAME: 60OFF 
+	 
+	     SHOWINGID                                        TOURID                                      DISCOUNTAMT                        STATUS                            COUPONID
+                -                                       5d70b4525b8b9f5a00e81b5e                              -                                                                           5d70ba285b8b9f5a00e81cab
+		5d70bebe5b8b9f5a00e81cfe        5d70bfbb5b8b9f5a00e81e73                              -	                                                                       5d70bf7a5b8b9f5a00e81e6a
+		5d7104b55b8b9f5a00e835cf                       -                                                       -                                    pending_feedback            5d710de05b8b9f5a00e83737
+		5d710e205b8b9f5a00e83738                      -                                                       -                                    archive                            5d710e8d5b8b9f5a00e8388f
+		5d711ae65b8b9f5a00e838a3                      -                                                       -                                    pending                           5d711c775b8b9f5a00e839e3
+		5d85385d52f0c234cba3685a                      -                                                      6000                               end                                 5d85388f52f0c234cba36943
+		
+		
+	COUPON NAME: TESTAPPIT
+
+       SHOWINGID                                        TOURID                                      DISCOUNTAMT                        STATUS                            COUPONID
+	             -                                         5d8c8e0f3e33db08be85ee24                          -                                                                            5d8c8e3a3e33db08be85ef70
+				
+	COUPON NAME:  NEW_COUPON
+
+        SHOWINGID                                        TOURID                                      DISCOUNTAMT                        STATUS                            COUPONID
+		5d8c8db73e33db08be85ecd4                      -                                                   8000                                  pending_feedback             5d8ca0db3e33db08be85f49e
+		5d8cb8953e33db08be85fbec                       -                                                   80                                     pending_feedback            5d8cb8b73e33db08be85fd09
+		
+		
+	COUPON NAME:  TRYSHOW100
+
+   	    SHOWINGID                                        TOURID                                      DISCOUNTAMT                        STATUS                            COUPONID
+		5d8e61eee40d771b6f8015ee                      -                                                     -                                       pending                              5d8e6246e40d771b6f80170e
+						 
+						 
+	COUPON NAME:  TRYSHOW50
+	
+	     SHOWINGID                                        TOURID                                      DISCOUNTAMT                        STATUS                            COUPONID
+		               -                                    5d8e62a5e40d771b6f801753                        -                                                                               5d8e62c0e40d771b6f801a12
+	
+    COUPON NAME:  Colo1
+	   
+	   SHOWINGID                                        TOURID                                      DISCOUNTAMT                        STATUS                            COUPONID
+	   5d8f0668e40d771b6f801c5e                      -                                                      55                                    pending_feedback               5d8f068fe40d771b6f801d12
+	
+	
+						 
+						 
+				 

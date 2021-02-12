@@ -1,0 +1,15 @@
+current directory: /home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+/home/calibraint/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20200924-3341-s462me.rb extconf.rb
+creating Makefile
+
+current directory: /home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" clean
+
+current directory: /home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR="
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.so
+
+current directory: /home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/bindex-0.8.1/ext/skiptrace
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 cruby.so ./.gem.20200924-3341-1i73rjz/skiptrace/internal

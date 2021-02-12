@@ -1,0 +1,24 @@
+current directory: /home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-0.2.4.1/ext/attach
+/home/calibraint/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20201021-5579-ctqajb.rb extconf.rb
+checking for vm_core.h... no
+checking for vm_core.h... no
+checking for vm_core.h... yes
+checking for iseq.h... yes
+checking for version.h... yes
+checking for vm_core.h... yes
+checking for vm_insnhelper.h... yes
+checking for vm_core.h... yes
+checking for method.h... yes
+creating Makefile
+
+current directory: /home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-0.2.4.1/ext/attach
+make "DESTDIR=" clean
+
+current directory: /home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-0.2.4.1/ext/attach
+make "DESTDIR="
+compiling attach.c
+linking shared-object attach.so
+
+current directory: /home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-0.2.4.1/ext/attach
+make "DESTDIR=" install
+/usr/bin/install -c -m 0755 attach.so ./.gem.20201021-5579-z0woiw

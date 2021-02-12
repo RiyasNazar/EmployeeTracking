@@ -1,0 +1,21 @@
+{
+  "name": "nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "crud.js",
+  "dependencies": {
+    "bluebird": "^3.5.3",
+    "express": "^4.16.4",
+    "lodash": "^4.17.11",
+    "mongodb": "^3.1.13",
+    "mongoose": "^5.4.13",
+    "package.json": "^2.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

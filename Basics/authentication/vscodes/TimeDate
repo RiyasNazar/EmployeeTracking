@@ -1,0 +1,32 @@
+ <div>
+                        <mat-form-field floatLabel="never" class="small">
+                            <input matInput (dateChange)="filter()" name="from" id="from" (keyup.enter)="filter()"
+                                [(ngModel)]="from" [matDatepicker]="fromPicker" (focus)="fromPicker.open()"
+                                placeholder="From">
+                            <mat-datepicker-toggle matSuffix [for]="fromPicker"></mat-datepicker-toggle>
+                            <mat-datepicker #fromPicker></mat-datepicker>
+                        </mat-form-field>
+                    </div>
+                    <div class="m-l-7 m-r-7">
+                        <p class="subtitle">to</p>
+                    </div>
+                    <div>
+                        <mat-form-field floatLabel="never" class="small">
+                            <input (dateChange)="filter()" (keyup.enter)="filter()" matInput name="to" id="to"
+                                [(ngModel)]="to" [matDatepicker]="toPicker" (focus)="toPicker.open()" placeholder="To">
+                            <mat-datepicker-toggle matSuffix [for]="toPicker"></mat-datepicker-toggle>
+                            <mat-datepicker #toPicker></mat-datepicker>
+                        </mat-form-field>
+</div> 
+
+getApprovalList(page, count, isSearch?) {
+        const apiData = {
+            page: page,
+            count: count,
+            from: _.isNull(this.from) ? undefined : this.timeOperations.changeFormat(this.from),
+            to: _.isNull(this.to) ? undefined : this.timeOperations.changeFormat(this.to),
+            status: (this.status === CONSTANTS.taskStatus.viewAll) ? undefined : this.status,
+            user: this.user,
+        };
+        if (isSearch) {
+            this.nav

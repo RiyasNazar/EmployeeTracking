@@ -1,0 +1,36 @@
+<tbody *ngIf="!isPropertyExists(showingDetail, 'tour') && showingDetail?.showings?.length > 0">
+                                    <tr *ngFor="let tour of showingDetail?.showings">
+                                <tr>
+                                    <td class="center">1</td>
+                                    <td class="left">Normal</td>
+                                    <td class="center">{{ tour?.isEmergency ? 0 : tour?.sbTotalHours }} </td>
+                                    <td class="right">{{ 55 }}</td>
+                                    <td class="right">{{ tour?.isEmergency ? 0 : (tour?.sbTotalHours * 55) }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="center">2</td>
+                                    <td class="left">Emergency</td>
+                                    <td class="center">{{ tour?.isEmergency ? tour?.sbTotalEmergencyHours : 0 }}</td>
+                                    <td class="right">{{ 100 }}</td>
+                                    <td class="right">{{ tour?.sbTotalEmergencyHours ? (tour?.sbTotalEmergencyHours
+                                        * 100) : 0 }}</td>
+                                </tr>
+                                <tr>
+                                    <td class="center">3</td>
+                                    <td class="left">Coupon</td>
+                                    <td class="center">{{ tour?.sbTotalHours ? tour?.sbTotalEmergencyHours : '-' }}</td>
+                                    <td class="right">{{ tour?.couponDetails?.discountedAmount || '-' }}</td>
+                                    <td class="right">{{ tour?.couponDetails?.discountedAmount ? '-'+tour?.couponDetails?.discountedAmount : 0 }} </td>
+                                </tr>
+                                <tr>
+                                    <td class="center"></td>
+                                    <td class="left"></td>
+                                    <td class="center"></td>
+                                    <td class="right">
+                                        <strong>Total</strong>
+                                    </td>
+                                    <td class="right">{{ (tour?.isEmergency ? 0 : (tour?.sbTotalHours * 55) + tour?.sbTotalEmergencyHours ? (tour?.sbTotalEmergencyHours
+                                            * 100) : 0) - tour?.couponDetails?.discountedAmount ? '-'+tour?.couponDetails?.discountedAmount : 0 }}
+                                    </td>
+                                </tr>
+                            </tbody>

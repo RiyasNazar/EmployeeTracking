@@ -1,0 +1,42 @@
+current directory: /home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-0.2.1/ext
+/home/calibraint/.rbenv/versions/2.5.1/bin/ruby -r ./siteconf20201020-23824-1afxw8p.rb extconf.rb
+checking for vm_core.h... no
+checking for vm_core.h... no
+checking for vm_core.h... yes
+creating Makefile
+
+current directory: /home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-0.2.1/ext
+make "DESTDIR=" clean
+
+current directory: /home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-0.2.1/ext
+make "DESTDIR="
+compiling breakpoint.c
+compiling context.c
+compiling debase_internals.c
+In file included from debase_internals.c:2:0:
+./hacks.h: In function ‘update_stack_size’:
+./hacks.h:12:57: warning: passing argument 1 of ‘RUBY_VM_END_CONTROL_FRAME’ from incompatible pointer type [-Wincompatible-pointer-types]
+   context->stack_size = (int)(RUBY_VM_END_CONTROL_FRAME(thread) - thread->cfp - 1);
+                                                         ^~~~~~
+In file included from ./hacks.h:1:0,
+                 from debase_internals.c:2:
+/home/calibraint/Documents/FirstRailApp/vendor/cache/ruby/2.5.0/gems/debase-ruby_core_source-0.10.11/lib/debase/ruby_core_source/ruby-2.5.1-p57/vm_core.h:1238:1: note: expected ‘const rb_execution_context_t * {aka const struct rb_execution_context_struct *}’ but argument is of type ‘rb_thread_t * {aka struct rb_thread_struct *}’
+ RUBY_VM_END_CONTROL_FRAME(const rb_execution_context_t *ec)
+ ^~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from debase_internals.c:2:0:
+./hacks.h:12:73: error: ‘rb_thread_t {aka struct rb_thread_struct}’ has no member named ‘cfp’
+   context->stack_size = (int)(RUBY_VM_END_CONTROL_FRAME(thread) - thread->cfp - 1);
+                                                                         ^~
+debase_internals.c: In function ‘is_path_accepted’:
+debase_internals.c:29:12: warning: initialization makes integer from pointer without a cast [-Wint-conversion]
+   filter = rb_funcall(mDebase, idFileFilter, 0, NULL);
+            ^~~~~~~~~~
+debase_internals.c:29:12: note: (near initialization for ‘rb_funcall_args[0]’)
+debase_internals.c: At top level:
+cc1: warning: unrecognized command line option ‘-Wno-self-assign’
+cc1: warning: unrecognized command line option ‘-Wno-constant-logical-operand’
+cc1: warning: unrecognized command line option ‘-Wno-parentheses-equality’
+Makefile:241: recipe for target 'debase_internals.o' failed
+make: *** [debase_internals.o] Error 1
+
+make failed, exit code 2
