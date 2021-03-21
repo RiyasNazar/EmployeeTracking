@@ -43,7 +43,7 @@ export class UserComponent implements OnInit {
   }
 
   deleteEmployee(i) {
-    // Need to UI design for mat dialog
+    // Need to fix UI design for mat dialog
     // const dialogReference = this.matDialog.open(ConfirmationDialogComponent, {
     //   width: '400px',
     //   height: 'auto',
