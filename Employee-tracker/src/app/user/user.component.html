@@ -1,0 +1,92 @@
+<h1 style="text-align:center">User Management</h1>
+<div class="AddEmployeeTitleContainer">
+    <div class="addEmployeeTitleContainer">
+        <div>Add Employee</div>
+    </div>
+    <div class="addEmployeeBtnContainer">
+        <div class="addNewEmployeeBtn" (click)="addNewEmployeeBtn()">+</div>
+    </div>
+</div>
+
+<div *ngIf="newEmployeeClicked">
+    <div class="formWrapper">
+        <form #form="ngForm" role="form">
+            <div class="form-group name">
+                <!-- <label for="name">Name:</label> -->
+                <input type="text" class="form-control input" id="name" name="name" required [(ngModel)]="model.name"
+                    placeholder="Name">
+            </div>
+
+            <div class="form-group position">
+                <!-- <label for="position">Position:</label> -->
+                <input type="text" class="form-control positionInput" id="position" required name="position"
+                    [(ngModel)]="model.position" placeholder="Position">
+            </div>
+            <div class="form-group position">
+                <input type="email" class="form-control positionInput" id="email" required name="email"
+                    [(ngModel)]="model.email" placeholder="Email">
+            </div>
+            <div class="form-group position">
+                <input type="text" class="form-control positionInput" id="dateOfJoining" required name="dateOfJoining"
+                    [(ngModel)]="model.dateOfJoining" placeholder="Date Of Joining">
+            </div>
+            <div class="submitBtnContainer">
+                <button type="submit" class="saveBtn" [disabled]="!form.valid" (click)="addEmployee()">SAVE</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="tableWrapper">
+    <div class="containerTitle">
+        <div class="oneTitle">Name</div>
+        <div class="twoTitle">Email</div>
+        <div class="twoTitle">Position</div>
+        <div class="twoTitle">Date Of Joining</div>
+        <div class="threeTitle">Actions</div>
+    </div>
+
+    <div class="containerListItems" *ngFor="let employee of employees; let i = index"
+        [style.background-color]="changeColorOne()">
+        <div class="one">{{employee?.name}}</div>
+        <div class="two">{{employee?.email}}</div>
+        <div class="two">{{employee?.position}}</div>
+        <div class="two">{{employee?.dateOfJoining}}</div>
+        <div class="three">
+            <button (click)="editEmployee(i, true)">Edit</button>
+            <button (click)="deleteEmployee(i)">Delete</button>
+        </div>
+    </div>
+</div>
+
+
+
+<ng-container *ngIf="isEditEmployeeClicked">
+    <div class="editEmployeeTitleContainer">
+        <div class="">Edit Employee</div>
+    </div>
+    
+    <form>
+        <div class="form-group name">
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model2.name" placeholder="Name">
+        </div>
+    
+        <div class="form-group position">
+            <input type="text" class="form-control" id="email" name="email" [(ngModel)]="model2.email"
+                placeholder="Email">
+        </div>
+    
+        <div class="form-group position">
+            <input type="text" class="form-control" id="position" name="position" [(ngModel)]="model2.position"
+                placeholder="Position">
+        </div>
+    
+        <div class="form-group position">
+            <input type="text" class="form-control" id="dateOfJoining" name="dateOfJoining" [(ngModel)]="model2.dateOfJoining"
+                placeholder="Date Of Joining">
+        </div>
+    
+        <button type="submit" (click)="updateEmployee()">Update</button>
+    </form>
+</ng-container>
