@@ -12,9 +12,10 @@ import * as _ from 'lodash';
 
 // For static example connection due to time management
 // Mongoose.connect("mongodb://localhost/theRestApi");
-// const PersonModel = Mongoose.model("person", {
-//     firstname: String,
-//     lastname: String
+// const BillModel = Mongoose.model("person", {
+//     name: String,
+//     price: String,
+//     quantity: String 
 // });
 
 import { NgForm } from '@angular/forms';
@@ -112,18 +113,18 @@ export class UserComponent implements OnInit {
 }
 
 // These are codes to interaction with server and db(MongoDb)
-// app.get("/people", async (request, response) => {
+// app.get("/bill", async (request, response) => {
 //   try {
-//       var result = await PersonModel.find().exec();
+//       var result = await BillModel.find().exec();
 //       response.send(result);
 //   } catch (error) {
 //       response.status(500).send(error);
 //   }
 // });
 
-// app.post("/person", async (request, response) => {
+// app.post("/bill", async (request, response) => {
 //   try {
-//       var person = new PersonModel(request.body);
+//       var person = new BillModel(request.body);
 //       var result = await person.save();
 //       response.send(result);
 //   } catch (error) {
@@ -131,9 +132,9 @@ export class UserComponent implements OnInit {
 //   }
 // });
 
-// app.put("/person/:id", async (request, response) => {
+// app.put("/bill/:id", async (request, response) => {
 //   try {
-//       var person = await PersonModel.findById(request.params.id).exec();
+//       var person = await BillModel.findById(request.params.id).exec();
 //       person.set(request.body);
 //       var result = await person.save();
 //       response.send(result);
@@ -142,9 +143,9 @@ export class UserComponent implements OnInit {
 //   }
 // });
 
-// app.delete("/person/:id", async (request, response) => {
+// app.delete("/bill/:id", async (request, response) => {
 //   try {
-//       var result = await PersonModel.deleteOne({ _id: request.params.id }).exec();
+//       var result = await BillModel.deleteOne({ _id: request.params.id }).exec();
 //       response.send(result);
 //   } catch (error) {
 //       response.status(500).send(error);
