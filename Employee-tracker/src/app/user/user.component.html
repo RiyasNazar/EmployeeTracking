@@ -1,0 +1,80 @@
+<h1 style="text-align:center">Bill Management</h1>
+<div class="AddEmployeeTitleContainer">
+    <div class="addEmployeeTitleContainer">
+        <div>Add Item</div>
+    </div>
+    <div class="addEmployeeBtnContainer">
+        <div class="addNewEmployeeBtn" (click)="addNewEmployeeBtn()">+</div>
+    </div>
+</div>
+
+<div *ngIf="newItemClicked">
+    <div class="formWrapper">
+        <form #form="ngForm" role="form">
+            <div class="form-group name">
+                <!-- <label for="name">Name:</label> -->
+                <input type="text" class="form-control input" id="name" name="name" required [(ngModel)]="model.name"
+                    placeholder="Name">
+            </div>
+
+            <div class="form-group position">
+                <!-- <label for="position">Position:</label> -->
+                <input type="number" class="form-control positionInput" id="price" required name="price"
+                    [(ngModel)]="model.price" placeholder="Price">
+            </div>
+            <div class="form-group position">
+                <input type="number" class="form-control positionInput" id="quantity" required name="quantity"
+                    [(ngModel)]="model.quantity" placeholder="Quantity">
+            </div>
+            <div class="submitBtnContainer">
+                <button type="submit" class="saveBtn" [disabled]="!form.valid" (click)="addItem()">SAVE</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<div class="tableWrapper">
+    <div class="containerTitle">
+        <div class="oneTitle">Name</div>
+        <div class="twoTitle">Price</div>
+        <div class="twoTitle">Quantity</div>
+        <div class="threeTitle">Actions</div>
+    </div>
+
+    <div class="containerListItems" *ngFor="let item of billDetails; let i = index"
+        [style.background-color]="changeColorOne()">
+        <div class="one">{{ item?.name }}</div>
+        <div class="two">{{ item?.price ? 'Rs. ' + item?.price : '' }}</div>
+        <div class="two">{{ item?.quantity }}</div>
+        <div class="three">
+            <button (click)="editItem(i, true)">Update</button>
+            <button (click)="deleteItem(i)">Remove</button>
+        </div>
+    </div>
+</div>
+
+
+
+<ng-container *ngIf="isEditItemClicked">
+    <div class="editEmployeeTitleContainer">
+        <div class="">Edit Bill</div>
+    </div>
+    
+    <form>
+        <div class="form-group name">
+            <input type="text" class="form-control" id="name" name="name" [(ngModel)]="model2.name" placeholder="Name">
+        </div>
+    
+        <div class="form-group position">
+            <input type="number" class="form-control" id="price" name="price" [(ngModel)]="model2.price"
+                placeholder="Price">
+        </div>
+    
+        <div class="form-group position">
+            <input type="number" class="form-control" id="quantity" name="quantity" [(ngModel)]="model2.quantity"
+                placeholder="Quantity">
+        </div>
+        <button type="submit" (click)="updateItem()">Update</button>
+    </form>
+</ng-container>
