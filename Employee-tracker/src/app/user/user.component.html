@@ -1,14 +1,14 @@
-<h1 style="text-align:center">User Management</h1>
+<h1 style="text-align:center">Bill Management</h1>
 <div class="AddEmployeeTitleContainer">
     <div class="addEmployeeTitleContainer">
-        <div>Add Employee</div>
+        <div>Add Item</div>
     </div>
     <div class="addEmployeeBtnContainer">
         <div class="addNewEmployeeBtn" (click)="addNewEmployeeBtn()">+</div>
     </div>
 </div>
 
-<div *ngIf="newEmployeeClicked">
+<div *ngIf="newItemClicked">
     <div class="formWrapper">
         <form #form="ngForm" role="form">
             <div class="form-group name">
@@ -19,19 +19,15 @@
 
             <div class="form-group position">
                 <!-- <label for="position">Position:</label> -->
-                <input type="text" class="form-control positionInput" id="position" required name="position"
-                    [(ngModel)]="model.position" placeholder="Position">
+                <input type="number" class="form-control positionInput" id="price" required name="price"
+                    [(ngModel)]="model.price" placeholder="Price">
             </div>
             <div class="form-group position">
-                <input type="email" class="form-control positionInput" id="email" required name="email"
-                    [(ngModel)]="model.email" placeholder="Email">
-            </div>
-            <div class="form-group position">
-                <input type="text" class="form-control positionInput" id="dateOfJoining" required name="dateOfJoining"
-                    [(ngModel)]="model.dateOfJoining" placeholder="Date Of Joining">
+                <input type="number" class="form-control positionInput" id="quantity" required name="quantity"
+                    [(ngModel)]="model.quantity" placeholder="Quantity">
             </div>
             <div class="submitBtnContainer">
-                <button type="submit" class="saveBtn" [disabled]="!form.valid" (click)="addEmployee()">SAVE</button>
+                <button type="submit" class="saveBtn" [disabled]="!form.valid" (click)="addItem()">SAVE</button>
             </div>
         </form>
     </div>
@@ -41,30 +37,28 @@
 <div class="tableWrapper">
     <div class="containerTitle">
         <div class="oneTitle">Name</div>
-        <div class="twoTitle">Email</div>
-        <div class="twoTitle">Position</div>
-        <div class="twoTitle">Date Of Joining</div>
+        <div class="twoTitle">Price</div>
+        <div class="twoTitle">Quantity</div>
         <div class="threeTitle">Actions</div>
     </div>
 
-    <div class="containerListItems" *ngFor="let employee of employees; let i = index"
+    <div class="containerListItems" *ngFor="let item of billDetails; let i = index"
         [style.background-color]="changeColorOne()">
-        <div class="one">{{employee?.name}}</div>
-        <div class="two">{{employee?.email}}</div>
-        <div class="two">{{employee?.position}}</div>
-        <div class="two">{{employee?.dateOfJoining}}</div>
+        <div class="one">{{ item?.name }}</div>
+        <div class="two">{{ item?.price ? 'Rs. ' + item?.price : '' }}</div>
+        <div class="two">{{ item?.quantity }}</div>
         <div class="three">
-            <button (click)="editEmployee(i, true)">Edit</button>
-            <button (click)="deleteEmployee(i)">Delete</button>
+            <button (click)="editItem(i, true)">Update</button>
+            <button (click)="deleteItem(i)">Remove</button>
         </div>
     </div>
 </div>
 
 
 
-<ng-container *ngIf="isEditEmployeeClicked">
+<ng-container *ngIf="isEditItemClicked">
     <div class="editEmployeeTitleContainer">
-        <div class="">Edit Employee</div>
+        <div class="">Edit Bill</div>
     </div>
     
     <form>
@@ -73,20 +67,14 @@
         </div>
     
         <div class="form-group position">
-            <input type="text" class="form-control" id="email" name="email" [(ngModel)]="model2.email"
-                placeholder="Email">
+            <input type="number" class="form-control" id="price" name="price" [(ngModel)]="model2.price"
+                placeholder="Price">
         </div>
     
         <div class="form-group position">
-            <input type="text" class="form-control" id="position" name="position" [(ngModel)]="model2.position"
-                placeholder="Position">
+            <input type="number" class="form-control" id="quantity" name="quantity" [(ngModel)]="model2.quantity"
+                placeholder="Quantity">
         </div>
-    
-        <div class="form-group position">
-            <input type="text" class="form-control" id="dateOfJoining" name="dateOfJoining" [(ngModel)]="model2.dateOfJoining"
-                placeholder="Date Of Joining">
-        </div>
-    
-        <button type="submit" (click)="updateEmployee()">Update</button>
+        <button type="submit" (click)="updateItem()">Update</button>
     </form>
 </ng-container>
